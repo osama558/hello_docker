@@ -46,4 +46,4 @@ COPY . .
 EXPOSE 8080
 
 # Run the application.
-CMD waitress
+CMD waitress-serve --host 127.0.0.1 main:app
