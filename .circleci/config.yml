@@ -16,6 +16,9 @@ jobs:
       - run:
           name: Run tests
           command: python -m tests
+      - run:
+          name: Waitress
+          command: waitress-serve --host 127.0.0.1 main:app    
       - persist_to_workspace:
           root: ~/project
           paths:
