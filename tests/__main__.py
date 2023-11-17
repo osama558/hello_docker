@@ -5,15 +5,25 @@ app_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 + '/main/')
 sys.path.append(app_dir)
 import routes
+import pdfReader
+import bs
 #sys.path.insert(0,'c:/Users/osama/Desktop/docker_project/hello_docker/main/')
 #from main import app
 
 class TestStringMethods(unittest.TestCase):
 
     def test_upper(self):
-    
         self.assertEqual(routes.hello_world(), "<p>Hello, World!</p>")
-        
+    def test_pdfread(self):
+        ls = ['.pdf']
+        kk = pdfReader.pdfmaster(ls)
+        self.assertEqual(kk.main(), None)  
+    def test_pdfread(self):
+        url = ''
+        url1 = 'https://en.wikipedia.org/wiki/Table_(information)'
+        dd = bs.extract(url1)
+        self.assertEqual(bs.extract(url), None)  
+        self.assertEqual(dd["Rank"], "Rhian")
     def test_name(self):
         self.assertEqual(routes.name("osama"), "<p>Hello, osama </p>")
 
