@@ -46,4 +46,6 @@ COPY . .
 EXPOSE 8080
 
 # Run the application.
-CMD waitress-serve --host 127.0.0.1 main:app
+ENTRYPOINT ["waitress-serve"]
+CMD ["--host","127.0.0.1","--port=8080", "main:app"]
+#CMD waitress-serve --host localhost main:app

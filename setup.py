@@ -22,12 +22,15 @@ setup(
         'mangodb==0.9',
         'MarkupSafe==2.1.3',
         'mkdir==2020.12.3',
-        'mysql==0.0.3',
-        'mysqlclient==2.2.0',
+        
+        'mysql-connector-python==8.2.0',
+        
         'orderdict==2020.12.3',
         'packaging==23.2',
         'pluggy==1.3.0',
+        'protobuf==4.21.12',
         'pymongo==4.6.0',
+        'PyMySQL==1.1.0',
         'pypdf2==3.0.1',
         'pytest==7.4.3',
         'requests==2.31.0',
